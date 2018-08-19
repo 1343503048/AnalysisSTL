@@ -14,7 +14,7 @@ int upper_bound(int arr[], int first, int size, int key) {
 		}
 		else {			//中位数小于等key，在右半边查找
 			first = middle + 1;		
-			len = len - half + 1;
+			len = len - half - 1;
 		}
 	}
 	return first;

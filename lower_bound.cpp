@@ -11,7 +11,7 @@ int lower_bound(int arr[], int first, int size, int key) {
 			len = half;
 		}
 		else {		               //在右半边序列中查找
-			half = len - half + 1;
+			len = len - half - 1;
 			first = middle + 1;
 		}
 	}
@@ -24,6 +24,6 @@ int main(int argc, char const *argv[]) {
 	for(int i = 0; i < size; ++ i) {
 		cout << arr[i] << " ";
 	}
-	cout << "\n找出非递减序列第一个大于等于7的位置: " << lower_bound(arr, 0, size, 3) + 1 << endl;
+	cout << "\n找出非递减序列第一个大于等于3的位置: " << lower_bound(arr, 0, size, 3) + 1 << endl;
 	return 0;
 }
